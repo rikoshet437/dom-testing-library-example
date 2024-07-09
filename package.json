@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "jest": {
+    "transform": {},
+    "testEnvironment": "jsdom"
+  },
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "@jest/globals": "^29.7.0",
+    "@stylistic/eslint-plugin": "^2.3.0",
+    "@testing-library/dom": "^10.3.1",
+    "@testing-library/jest-dom": "^6.4.6",
+    "eslint": "^9.6.0",
+    "globals": "^15.8.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "npm-check-updates": "^16.14.20"
+  }
+}
