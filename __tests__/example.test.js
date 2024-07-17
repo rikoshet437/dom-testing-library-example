@@ -4,10 +4,10 @@ import {
   screen,
 } from '@testing-library/dom'
 import userEvent from '@testing-library/user-event'
-import { test } from '@jest/globals'
-import { debug } from 'jest-preview'
-// import from '@hexlet/tic-tac-toe/public/style.css'
+import { debug } from 'vitest-preview'
+import '@hexlet/tic-tac-toe/public/style.css'
 import { TicTacToe } from '@hexlet/tic-tac-toe'
+import { test } from 'vitest'
 
 test('test', async () => {
   const game = new TicTacToe(document.body)

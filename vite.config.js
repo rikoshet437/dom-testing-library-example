@@ -1,9 +1,10 @@
-import { defineConfig } from 'vitest/config'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   test: {
-    css: true,
     environment: 'jsdom',
-    setupFiles: ['./vitest-setup.js'],
+    setupFiles: ['./vitest.setup.js'],
+    css: true,
   },
 })
+

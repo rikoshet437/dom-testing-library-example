@@ -5,4 +5,4 @@ test-watch:
 	npm run test -- --watch
 
 test-preview:
-	npm run jest-preview
+	npm run vitest-preview
