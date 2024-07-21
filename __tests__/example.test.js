@@ -1,33 +1,41 @@
 // @ts-check
 
-import {
-  screen,
-} from '@testing-library/dom'
+import '@testing-library/jest-dom/vitest'
+import { test, expect } from 'vitest'
+import { screen } from '@testing-library/dom'
 import userEvent from '@testing-library/user-event'
-import { debug } from 'vitest-preview'
-import '@hexlet/tic-tac-toe/public/style.css'
-import { TicTacToe } from '@hexlet/tic-tac-toe'
-import { test } from 'vitest'
 
-test('test', async () => {
+import { TicTacToe } from '@hexlet/tic-tac-toe'
+
+test('check game', async () => {
+  const user = userEvent.setup()
+
   const game = new TicTacToe(document.body)
   game.start()
 
-  debug()
-  // /** @type {HTMLInputElement} */
-  /* const input = screen.getByLabelText('Name') */
-  /**/
-  /* const famousProgrammerInHistory = 'Ada Lovelace' */
-  /* input.value = famousProgrammerInHistory */
-  /**/
-  /* const submitButton = screen.getByRole('button', { name: /submit/i }) */
-  /**/
-  /* submitButton.click() */
-  // getByText(document.body, 'Submit').click()
+  const input1 = screen.getByLabelText('Player 1')
+  const input2 = screen.getByLabelText('Player 2')
 
-  // const element = await screen.findByTestId('printed-name')
-  //
-  // expect(element).toHaveTextContent(
-  //   famousProgrammerInHistory,
-  // )
+  await user.type(input1, 'user 1')
+  await user.type(input2, 'user 2')
+
+  const submitButton = screen.getByText('Start Game')
+  await user.click(submitButton)
+
+  expect(document.body).toHaveTextContent('user 1, you are up!')
+
+  await user.click(screen.getByTestId('cell-6'))
+  expect(document.body).toHaveTextContent('user 2, you are up!')
+
+  await user.click(screen.getByTestId('cell-5'))
+  expect(document.body).toHaveTextContent('user 1, you are up!')
+
+  await user.click(screen.getByTestId('cell-3'))
+  await user.click(screen.getByTestId('cell-2'))
+  await user.click(screen.getByTestId('cell-9'))
+
+  expect(document.body).toHaveTextContent('Congratulations user 1')
+  expect(document.body).toHaveTextContent('You are our winner!')
+
+  // debug()
 })

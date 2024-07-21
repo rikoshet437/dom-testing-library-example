@@ -12,12 +12,11 @@
     "@testing-library/user-event": "^14.5.2",
     "eslint": "^9.7.0",
     "globals": "^15.8.0",
-    "jsdom": "^24.1.0",
     "npm-check-updates": "^16.14.20",
     "vitest": "^2.0.3",
     "vitest-preview": "^0.0.1"
   },
   "dependencies": {
-    "@hexlet/tic-tac-toe": "^0.0.10"
+    "@hexlet/tic-tac-toe": "^0.0.12"
   }
 }
