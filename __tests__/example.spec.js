@@ -3,7 +3,7 @@
 import '@testing-library/jest-dom/vitest'
 import { test, expect } from 'vitest'
 import { screen } from '@testing-library/dom'
-import userEvent from '@testing-library/user-event'
+import { userEvent } from '@testing-library/user-event'
 
 import { TicTacToe } from '@hexlet/tic-tac-toe'
 
