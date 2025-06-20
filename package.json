@@ -1,5 +1,5 @@
 {
-  "name": "hexlet-dom-testing-library",
+  "name": "hexlet-testing-library",
   "type": "module",
   "scripts": {
     "test": "vitest run",
@@ -23,5 +23,21 @@
   },
   "dependencies": {
     "@hexlet/tic-tac-toe": "^0.0.14"
-  }
+  },
+  "version": "1.0.0",
+  "description": "nope",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexlet-components/dom-testing-library-example.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Rikoshet437",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hexlet-components/dom-testing-library-example/issues"
+  },
+  "homepage": "https://github.com/hexlet-components/dom-testing-library-example#readme"
 }
